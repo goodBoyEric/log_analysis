@@ -5,7 +5,7 @@
 import time
 import binascii
 
-file = """C:\\Users\\zhaohaifeng\\Documents\\WeChat Files\\wxid_q51iv4rp4rwo12\\Files\\001007604624.log"""
+local_file_address = """C:\\Users\\zhaohaifeng\\Documents\\WeChat Files\\wxid_q51iv4rp4rwo12\\Files\\001007604624.log"""
 
 
 def main_function(file_address=''):
@@ -102,7 +102,7 @@ def gsm_status(gsm_status_16):
         gsm_status_data = u'gsm_status=8,TCP连接OK'
     else:
         gsm_status_data = u'gsm_status状态错误'
-        assert (u'gsm_status 状态错误')
+        assert u'gsm_status 状态错误'
     print u'GSM：', gsm_status_data
     return gsm_status_data
 
@@ -135,7 +135,7 @@ def internet_status(internet_status_16):
     else:
         internet_status_data = u'internet_status状态错误'
         assert ArithmeticError(u'internet_status状态错误')
-    print '入网状态:',internet_status_data
+    print '入网状态:', internet_status_data
     return internet_status_data
 
 
@@ -199,4 +199,3 @@ def gps_status(gps_status_16):
 
 if __name__ == '__main__':
     main_function(file_address=file)
-
